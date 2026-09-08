@@ -1,0 +1,65 @@
+@model IEnumerable<RRHHManager.Models.HistorialSalarial>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SalarioAnterior)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SalarioNuevo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PorcentajeAumento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaCambio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Motivo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empleado.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalarioAnterior)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalarioNuevo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PorcentajeAumento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaCambio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Motivo)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
