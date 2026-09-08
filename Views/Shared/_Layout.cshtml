@@ -20,10 +20,38 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Empleados" asp-action="Index">Empleados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Departamentos" asp-action="Index">Departamentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Puestos" asp-action="Index">Puestos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Vacaciones" asp-action="Index">Vacaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Index">Usuarios</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" href="#" id="masMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Más
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="masMenu">
+                                <li><a class="dropdown-item" asp-controller="Constancias" asp-action="Index">Constancias</a></li>
+                                <li><a class="dropdown-item" asp-controller="ExpedientesDigitales" asp-action="Index">Expedientes Digitales</a></li>
+                                <li><a class="dropdown-item" asp-controller="HistorialLaboral" asp-action="Index">Historial Laboral</a></li>
+                                <li><a class="dropdown-item" asp-controller="HistorialSalarial" asp-action="Index">Historial Salarial</a></li>
+                                <li><a class="dropdown-item" asp-controller="AntiguedadLaboral" asp-action="Index">Antigüedad Laboral</a></li>
+                                <li><a class="dropdown-item" asp-controller="Auditoria" asp-action="Index">Auditoría</a></li>
+                                <li><a class="dropdown-item" asp-controller="Permisos" asp-action="Index">Permisos</a></li>
+                                <li><a class="dropdown-item" asp-controller="Reportes" asp-action="Index">Reportes</a></li>
+                                <li><a class="dropdown-item" asp-controller="Exportaciones" asp-action="Index">Exportaciones</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
