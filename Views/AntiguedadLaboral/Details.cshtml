@@ -1,0 +1,54 @@
+@model RRHHManager.Models.AntiguedadLaboral
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>AntiguedadLaboral</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Empleado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Empleado.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaIngreso)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaIngreso)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaCalculo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaCalculo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Anios)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Anios)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Meses)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Meses)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dias)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dias)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

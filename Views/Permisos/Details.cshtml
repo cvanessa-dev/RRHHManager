@@ -1,0 +1,54 @@
+@model RRHHManager.Models.Permisos
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Permisos</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Rol)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Rol.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Modulo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Modulo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PuedeVer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PuedeVer)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PuedeCrear)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PuedeCrear)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PuedeEditar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PuedeEditar)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PuedeEliminar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PuedeEliminar)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,4 +1,4 @@
-﻿using RRHHManager.Models;
+using RRHHManager.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
@@ -29,5 +29,6 @@ namespace RRHHManager.Data
         { modelBuilder.Entity<Puesto>().HasOne(p => p.Departamento).WithMany().HasForeignKey(p => p.DepartamentoId).OnDelete(DeleteBehavior.Restrict); 
             modelBuilder.Entity<Empleado>().HasOne(e => e.Puesto).WithMany(p => p.Empleados).HasForeignKey(e => e.PuestoId).OnDelete(DeleteBehavior.Restrict); 
             modelBuilder.Entity<Empleado>().HasOne(e => e.Departamento).WithMany(d => d.Empleados).HasForeignKey(e => e.DepartamentoId).OnDelete(DeleteBehavior.Restrict); }
+        public DbSet<RRHHManager.Models.Exportaciones> Exportaciones { get; set; } = default!;
     }
 }
