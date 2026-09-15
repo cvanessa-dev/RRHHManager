@@ -28,6 +28,10 @@ Sistema web para la gestión de Recursos Humanos, desarrollado en C# con ASP.NET
 - Historial
 - Auditoria
 
+## Capturas de pantalla
+
+### Dashboard
+![Inic](screenshots/Inic.png)
 ## 📌 Estado actual
 
 - [x] Estructura del proyecto (Models, Controllers, Views)
