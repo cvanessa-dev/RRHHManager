@@ -1,8 +1,77 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center py-4">
+    <h1 class="display-4 fw-bold" style="color: var(--color-primario);">Sistema de Recursos Humanos</h1>
+    <p class="lead text-muted">Gestión de empleados, departamentos, vacaciones y más</p>
+</div>
+
+<div class="row g-3 px-4 mb-4">
+    <div class="col-md-4">
+        <div class="p-3 rounded text-white" style="background-color: var(--color-primario);">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <div class="fs-2 fw-bold">@ViewBag.TotalEmpleados</div>
+                    <div>Empleados</div>
+                </div>
+                <i class="bi bi-people-fill fs-1 opacity-75"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-3 rounded text-white" style="background-color: var(--color-secundario);">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <div class="fs-2 fw-bold">@ViewBag.TotalDepartamentos</div>
+                    <div>Departamentos</div>
+                </div>
+                <i class="bi bi-building fs-1 opacity-75"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-3 rounded text-white" style="background-color: #b8860b;">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <div class="fs-2 fw-bold">@ViewBag.VacacionesPendientes</div>
+                    <div>Vacaciones Pendientes</div>
+                </div>
+                <i class="bi bi-calendar-event fs-1 opacity-75"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 px-4">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <i class="bi bi-people fs-1 mb-3" style="color: var(--color-secundario);"></i>
+                <h5 class="card-title">Empleados</h5>
+                <p class="card-text">Consultá, agregá o editá la información del personal.</p>
+                <a asp-controller="Empleados" asp-action="Index" class="btn btn-primary">Ir a Empleados</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <i class="bi bi-diagram-3 fs-1 mb-3" style="color: var(--color-secundario);"></i>
+                <h5 class="card-title">Departamentos y Puestos</h5>
+                <p class="card-text">Organizá la estructura de la empresa.</p>
+                <a asp-controller="Departamentos" asp-action="Index" class="btn btn-primary">Ir a Departamentos</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <i class="bi bi-calendar-check fs-1 mb-3" style="color: var(--color-secundario);"></i>
+                <h5 class="card-title">Vacaciones</h5>
+                <p class="card-text">Solicitá y aprobá períodos vacacionales.</p>
+                <a asp-controller="Vacaciones" asp-action="Index" class="btn btn-primary">Ir a Vacaciones</a>
+            </div>
+        </div>
+    </div>
 </div>
