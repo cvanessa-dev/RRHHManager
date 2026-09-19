@@ -49,8 +49,8 @@ namespace RRHHManager.Controllers
         // GET: Empleados/Create
         public IActionResult Create()
         {
-            ViewData["DepartamentoId"] = new SelectList(_context.Departamentos, "Id", "Id");
-            ViewData["PuestoId"] = new SelectList(_context.Puestos, "Id", "Id");
+            ViewData["DepartamentoId"] = new SelectList(_context.Departamentos, "Id", "Nombre");
+            ViewData["PuestoId"] = new SelectList(_context.Puestos, "Id", "Nombre");
             return View();
         }
 
@@ -67,8 +67,8 @@ namespace RRHHManager.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DepartamentoId"] = new SelectList(_context.Departamentos, "Id", "Id", empleado.DepartamentoId);
-            ViewData["PuestoId"] = new SelectList(_context.Puestos, "Id", "Id", empleado.PuestoId);
+            ViewData["DepartamentoId"] = new SelectList(_context.Departamentos, "Id", "Nombre", empleado.DepartamentoId);
+            ViewData["PuestoId"] = new SelectList(_context.Puestos, "Id", "Nombre", empleado.PuestoId);
             return View(empleado);
         }
 
@@ -85,8 +85,8 @@ namespace RRHHManager.Controllers
             {
                 return NotFound();
             }
-            ViewData["DepartamentoId"] = new SelectList(_context.Departamentos, "Id", "Id", empleado.DepartamentoId);
-            ViewData["PuestoId"] = new SelectList(_context.Puestos, "Id", "Id", empleado.PuestoId);
+            ViewData["DepartamentoId"] = new SelectList(_context.Departamentos, "Id", "Nombre", empleado.DepartamentoId);
+            ViewData["PuestoId"] = new SelectList(_context.Puestos, "Id", "Nombre", empleado.PuestoId);
             return View(empleado);
         }
 
@@ -122,8 +122,8 @@ namespace RRHHManager.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DepartamentoId"] = new SelectList(_context.Departamentos, "Id", "Id", empleado.DepartamentoId);
-            ViewData["PuestoId"] = new SelectList(_context.Puestos, "Id", "Id", empleado.PuestoId);
+            ViewData["DepartamentoId"] = new SelectList(_context.Departamentos, "Id", "Nombre", empleado.DepartamentoId);
+            ViewData["PuestoId"] = new SelectList(_context.Puestos, "Id", "Nombre", empleado.PuestoId);
             return View(empleado);
         }
 
